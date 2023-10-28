@@ -7,11 +7,11 @@ jobs:
   check-application:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/ckeckout@3
+      - uses: actions/ckeckout@v3
         with:
           fetch-depth: 0
 
-      - uses: actions/setu-go
+      - uses: actions/setup-go@v2
         with:
           go-version: 1.21
 
