@@ -1,0 +1,16 @@
+name: ci-golang
+on: [push]
+jobs:
+  check-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/ckeckout@3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setu-go
+        with:
+          go-version: 1.21
+
+      - run: go test
+      - run: go run math.go
